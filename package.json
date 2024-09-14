@@ -1,0 +1,14 @@
+{
+  "name": "playwright-random-calendar-date-generator",
+  "version": "1.0.0",
+  "description": "Playwright tests for Random Calendar Date Generator",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.47.1",
+    "@types/node": "^22.5.4"
+  }
+}
