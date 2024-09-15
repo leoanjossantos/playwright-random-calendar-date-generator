@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { DatesGeneratorPage } = require('../pages/datesGeneratorPage');
+const { DatesGeneratorPage } = require('../pages/dates-generator-page');
 
 test.describe('Random Date Generator Automation', () => {
     test('should validate 4 random dates', async ({ page }) => {
