@@ -1,4 +1,4 @@
-const { expect } = require('@playwright/test');
+import * as selectors from '../selectors/dates-generator-selectors';
 
 export class DatesGeneratorPage {
     /**
@@ -6,15 +6,15 @@ export class DatesGeneratorPage {
      */
     constructor(page) {
         this.page = page;
-        this.totalOfDays = page.locator('input[name="num"]');
+        this.totalOfDays = page.locator(selectors.totalOfDays);
 
-        this.startDay = page.locator('select[name="start_day"]');
-        this.startMonth = page.locator('select[name="start_month"]');
-        this.startYear = page.locator('select[name="start_year"]');
+        this.startDay = page.locator(selectors.startDay);
+        this.startMonth = page.locator(selectors.startMonth);
+        this.startYear = page.locator(selectors.startYear);
 
-        this.endDay = page.locator('select[name="end_day"]');
-        this.endMonth = page.locator('select[name="end_month"]');
-        this.endYear = page.locator('select[name="end_year"]');
+        this.endDay = page.locator(selectors.endDay);
+        this.endMonth = page.locator(selectors.endMonth);
+        this.endYear = page.locator(selectors.endYear);
     }
 
     async fillTotalOfDates(totalOfDaysInput) {

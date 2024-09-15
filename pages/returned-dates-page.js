@@ -1,4 +1,5 @@
 import { expect } from '@playwright/test';
+import * as selectors from '../selectors/returned-dates-selectors'
 
 export class ReturnedDatesPage {
     /**
@@ -6,7 +7,7 @@ export class ReturnedDatesPage {
      */
     constructor(page) {
         this.page = page;
-        this.returnedDates = page.locator("//p[@style='line-height: 1.4em; margin-left: 2em']");
+        this.returnedDates = page.locator(selectors.returnedDates);
     }
 
     async returnValidDates(totalDates) {
