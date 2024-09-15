@@ -4,7 +4,7 @@
   "description": "Playwright tests for Random Calendar Date Generator",
   "main": "index.js",
   "scripts": {
-    "e2e-tests": "npx playwright test --reporter=list"
+    "e2e-tests": "npx playwright test"
   },
   "keywords": [],
   "author": "",
