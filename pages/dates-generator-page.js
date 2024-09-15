@@ -1,6 +1,5 @@
-import { start } from 'repl';
-
 const { expect } = require('@playwright/test');
+
 export class DatesGeneratorPage {
     /**
      * @param {import('@playwright/test').Page} page
@@ -19,7 +18,7 @@ export class DatesGeneratorPage {
     }
 
     async fillTotalOfDates(totalOfDaysInput) {
-        await this.totalOfDays.fill(totalOfDaysInput);
+        await this.totalOfDays.fill(totalOfDaysInput.toString());
     }
 
     async selectStartDate(startDate) {
