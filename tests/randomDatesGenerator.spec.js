@@ -15,13 +15,13 @@ test.describe('Random Date Generator Automation', () => {
         await datesGeneratorPage.selectEndDate(endDate);
         await datesGeneratorPage.clickGetDates();
 
-        // Asserting there are 4 elements returned (easiest way). Based on the number of child <br> tags under <p> tag
+        // Asserting that there are 4 elements returned (easiest way) based on the number of child <br> tags under <p> tag
         await expect(page.locator('p >> br')).toHaveCount(4);
 
         // Another way is to use Xpath to find the element
         const element = page.locator("//p[@style='line-height: 1.4em; margin-left: 2em']");
         const datesText = await element.textContent();
-        const dateLines = datesText.trim().split('\n').filter(line => line);
+        const dateLines = datesText.trim().split('\n').filter(line => line.trim());
         expect(dateLines.length).toBe(4);
         
         // Assert the requested range date are in the returned sentence

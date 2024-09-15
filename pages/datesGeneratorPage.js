@@ -25,22 +25,24 @@ export class DatesGeneratorPage {
     async selectStartDate(startDate) {
         if (startDate instanceof Date) {
             await this.startDay.selectOption(startDate.getUTCDate().toString());
-            await this.startMonth.selectOption((startDate.getUTCMonth()+1).toString()); // add +1 into the month because it is 0 indexed (0=january)
+            // add +1 to the month because it's 0 indexed (0=january)
+            await this.startMonth.selectOption((startDate.getUTCMonth()+1).toString()); 
             await this.startYear.selectOption(startDate.getUTCFullYear().toString());
         }
         else {
-            console.log('Invalid start date');
+            console.log('Invalid start date.');
         }
     }
 
     async selectEndDate(endDate) {
         if (endDate instanceof Date) {
             await this.endDay.selectOption(endDate.getUTCDate().toString());
-            await this.endMonth.selectOption((endDate.getUTCMonth()+1).toString()); // add +1 into the month because it is 0 indexed (0=january)
+            // add +1 to the month because it's 0 indexed (0=january)
+            await this.endMonth.selectOption((endDate.getUTCMonth()+1).toString());
             await this.endYear.selectOption(endDate.getUTCFullYear().toString());
         }
         else {
-            console.log('Invalid start date');
+            console.log('Invalid end date.');
         }
     }
 
