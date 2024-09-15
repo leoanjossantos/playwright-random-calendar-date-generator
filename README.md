@@ -1,7 +1,6 @@
-# playwright-random-calendar-date-generator
-Playwright tests for Random Calendar Date Generator
+# Playwright Random Calendar Date Generator
 
-This repository contains an automated testing suite using [Playwright](https://playwright.dev/) for end-to-end (E2E) testing of web application [RANDON.ORG](https://www.random.org/calendar-dates). The tests are written in JavaScript following the Page Object Model (POM) design pattern to ensure scalability and maintainability.
+This repository contains an automated testing suite using [Playwright](https://playwright.dev/) for end-to-end (E2E) testing of web application [RANDON.ORG](https://www.random.org/calendar-dates). The tests are written in JavaScript following the Page Object Model (POM) design pattern to ensure **scalability** and **maintainability**.
 
 ## Table of Contents
 
@@ -11,7 +10,7 @@ This repository contains an automated testing suite using [Playwright](https://p
 
 ## Project Overview
 
-This project automates the testing of web applications by simulating user interactions and validating outcomes. It is designed to help developers and QA engineers verify that features behave as expected across different browsers and devices.
+This project automates user interactions and validates whether the generated dates are displayed as expected.
 
 ### Features
 - Supports Chrome, Firefox, and WebKit browsers.
@@ -46,7 +45,7 @@ Playwright installs the necessary [browser](https://playwright.dev/docs/browsers
         npm install
 4.  ### Running tests:
     ```bash
-        npm run e2e-tests // custom command from package.json
+        npm run e2e-tests
     ```
     Other possibilities:
     ```bash
